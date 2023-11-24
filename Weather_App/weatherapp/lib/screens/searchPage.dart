@@ -1,17 +1,16 @@
- 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubits/get_weather_cubits/get_weather_cubit.dart';
 
 class SearchPage extends StatelessWidget {
- const SearchPage({super.key});
-  
+  const SearchPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(  
-        title:const  Text("Search a City "),
+      appBar: AppBar(
+        title: const Text("Search a City "),
       ),
       body: Center(
         child: Padding(

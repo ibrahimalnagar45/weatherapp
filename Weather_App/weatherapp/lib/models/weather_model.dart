@@ -1,5 +1,3 @@
- 
-
 class WeatherModel {
   final String cityName;
   final DateTime date;
@@ -8,19 +6,21 @@ class WeatherModel {
   final double maxTemp;
   final double minTemp;
   final String weatherstatus;
-
-  WeatherModel(
-      {required this.cityName,
-      required this.date,
-      required this.image,
-      required this.temp,
-      required this.maxTemp,
-      required this.minTemp,
-      required this.weatherstatus});
+// the base constractor
+  WeatherModel({
+    required this.cityName,
+    required this.date,
+    required this.image,
+    required this.temp,
+    required this.maxTemp,
+    required this.minTemp,
+    required this.weatherstatus,
+  });
+  // factory constructor which i could return an object of the class 
   factory WeatherModel.fromjson(json) {
     return WeatherModel(
       cityName: json["location"]["name"],
-      date:DateTime.parse( json["current"]["last_updated"]),
+      date: DateTime.parse(json["current"]["last_updated"]),
       image: json["forecast"]["forecastday"][0]["day"]["condition"]["icon"],
       temp: json["forecast"]["forecastday"][0]["day"]["avgtemp_c"],
       maxTemp: json["forecast"]["forecastday"][0]["day"]["maxtemp_c"],

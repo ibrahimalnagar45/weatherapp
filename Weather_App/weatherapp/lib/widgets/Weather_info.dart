@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubits/get_weather_cubits/get_weather_cubit.dart';
 import '../models/weather_model.dart';
-import '../screens/HomePage.dart';
+import '../screens/home_bage.dart';
 
 class WeatherInfo extends StatelessWidget {
   const WeatherInfo({
@@ -62,7 +62,7 @@ class WeatherInfo extends StatelessWidget {
                 ),
               ),
               Text(
-                "${weather.temp}",
+                "${weather.temp.round()}",
                 style: const TextStyle(
                   fontSize: 30,
                 ),
